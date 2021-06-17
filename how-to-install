@@ -1,0 +1,15 @@
+
+# Steps to create project
+
+1 The first time you build the project, you must execute this command
+
+    $ docker run --rm -v "${PWD}:/$(basename `pwd`)" -w "/$(basename `pwd`)" -it node:latest sh -c "npm install -g @angular/cli && ng new angulartest --directory ."
+
+2 Once the project already has a package.json file yo must execute this:
+    $ docker-compose up --build -p 
+
+3 Finally, check container status: 
+
+    $ docker ps
+
+4 Ready to go!
